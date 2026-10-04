@@ -1,0 +1,48 @@
+{
+  "name": "grandpasai-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for Grandpa's AI research station — AI agents can search and retrieve curated research on age reversal, robotics, AI, and space colonization",
+  "type": "module",
+  "main": "server.js",
+  "bin": {
+    "grandpasai-mcp": "./server.js"
+  },
+  "files": [
+    "server.js",
+    "server-http.js",
+    "server-card.json",
+    "server-card.smithery.json",
+    "auth.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "start": "node server.js",
+    "start:http": "node server-http.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "grandpasai",
+    "research",
+    "ai-agent",
+    "longevity",
+    "robotics",
+    "age-reversal"
+  ],
+  "mcpName": "io.github.wescorp/grandpasai",
+  "author": "Grandpa's AI (wescorp)",
+  "license": "MIT",
+  "homepage": "https://grandpasai.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wescorp/grandpasai-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wescorp/grandpasai-mcp/issues"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "zod": "^4.4.3"
+  }
+}

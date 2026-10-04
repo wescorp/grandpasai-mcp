@@ -1,0 +1,61 @@
+{
+  "serverInfo": {
+    "name": "grandpasai",
+    "title": "Grandpa's AI",
+    "version": "1.0.0"
+  },
+  "authentication": {
+    "required": false,
+    "schemes": []
+  },
+  "tools": [
+    {
+      "name": "search_research",
+      "description": "Full-text search across Grandpa's AI research corpus. Returns ranked results with titles, summaries, and article paths.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": { "type": "string", "description": "Search query — words or phrases to find in the research" },
+          "category": { "type": "string", "description": "Optional filter: 'age-reversal', 'artificial-intelligence', 'humanoid-robotics', 'space-colonization', or 'custom'" },
+          "maxResults": { "type": "number", "description": "Maximum number of results (default 10, max 25)" }
+        },
+        "required": ["query"]
+      }
+    },
+    {
+      "name": "get_article",
+      "description": "Retrieve a full research article by its path. Use paths from search results.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": { "type": "string", "description": "Article path, e.g. 'age-reversal/categories/01-epigenetic-reprogramming.md'" },
+          "format": { "type": "string", "enum": ["markdown", "summary"], "description": "'markdown' for full article, 'summary' for metadata + first paragraph" }
+        },
+        "required": ["path"]
+      }
+    },
+    {
+      "name": "list_categories",
+      "description": "List all research categories and subcategories with article counts.",
+      "inputSchema": { "type": "object", "properties": {} }
+    },
+    {
+      "name": "get_latest_research",
+      "description": "Get the most recently updated research articles across all categories.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "count": { "type": "number", "description": "Number of articles (default 5, max 20)" },
+          "category": { "type": "string", "description": "Optional filter by top-level category" }
+        }
+      }
+    },
+    {
+      "name": "get_topic_tree",
+      "description": "Get the full hierarchical topic tree from grandpasai.com with page URLs.",
+      "inputSchema": { "type": "object", "properties": {} }
+    }
+  ],
+  "resources": [],
+  "prompts": []
+}

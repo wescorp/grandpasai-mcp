@@ -1,0 +1,38 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/v1/server-card.schema.json",
+  "name": "io.github.wescorp/grandpasai",
+  "title": "Grandpa's AI",
+  "version": "1.0.0",
+  "description": "Search and retrieve Grandpa's AI curated research on longevity, robotics, AI, and space.",
+  "websiteUrl": "https://grandpasai.com",
+  "repository": {
+    "source": "github",
+    "url": "https://github.com/wescorp/grandpasai-mcp"
+  },
+  "icons": [
+    {
+      "src": "https://grandpasai.com/logo.svg",
+      "mimeType": "image/svg+xml",
+      "sizes": ["any"],
+      "theme": "dark"
+    },
+    {
+      "src": "https://grandpasai.com/logo.png",
+      "mimeType": "image/png",
+      "sizes": ["48x48", "96x96"]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://grandpasai.com/mcp",
+      "supportedProtocolVersions": ["2025-11-25", "2025-06-18", "2025-03-26"]
+    }
+  ],
+  "_meta": {
+    "com.grandpasai": {
+      "categories": ["age-reversal", "artificial-intelligence", "humanoid-robotics", "space-colonization", "custom"],
+      "articleCount": "230+"
+    }
+  }
+}
